@@ -1,0 +1,6 @@
+/* fix wordcount for cke_float */
+
+.cke_float .cke_wordcount {
+	float: inherit;
+}
+
