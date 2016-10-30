@@ -5,56 +5,45 @@ if (!$modx = $object->xpdo AND !$object->xpdo instanceof modX) {
     return true;
 }
 
-$area = 'mckedep_ckeditor_config';
-
 /** @var $options */
 switch ($options[xPDOTransport::PACKAGE_ACTION]) {
     case xPDOTransport::ACTION_INSTALL:
     case xPDOTransport::ACTION_UPGRADE:
 
+        /** @var modCKEditor $modCKEditor */
+        if (!$modCKEditor = $modx->getService('modckeditor')) {
+            $modx->log(modX::LOG_LEVEL_ERROR, '[mckedExtraPlugins] Could not load modCKEditor');
 
-        $plugins = array(
-            'wordcount' => array(
-                '/components/modckeditor/vendor/plugins/wordcount/wordcount/plugin.js'
-            ),
-            'chart' => array(
-                '/components/modckeditor/vendor/plugins/chart/plugin.js'
-            ),
-        );
-
-        /* setting addExternalPlugins */
-        $key = $area . '_addExternalPlugins';
-        if (!$tmp = $modx->getObject('modSystemSetting', array('key' => $key))) {
-            $tmp = $modx->newObject('modSystemSetting');
-            $tmp->fromArray(array(
-                'key'       => $key,
-                'xtype'     => 'textarea',
-                'namespace' => 'modckeditor',
-                'area'      => $area,
-                'editedon'  => null,
-            ), '', true, true);
+            return false;
         }
-        $tmp->set('value', json_encode($plugins, 1));
-        $tmp->save();
 
-        /* setting extraPlugins */
-        $key = $area . '_extraPlugins';
-        if (!$tmp = $modx->getObject('modSystemSetting', array('key' => $key))) {
-            $tmp = $modx->newObject('modSystemSetting');
-            $tmp->fromArray(array(
-                'key'       => $key,
-                'xtype'     => 'textarea',
-                'namespace' => 'modckeditor',
-                'area'      => $area,
-                'editedon'  => null,
-            ), '', true, true);
+        $modx->removeCollection('modSystemSetting', array(
+            'key:LIKE' => "mckedep_ckeditor_config_%",
+            'area' => 'mckedep_ckeditor_config'
+        ));
+
+        $vendors = isset($options['vendors']) ? $options['vendors'] : null;
+
+        $path = MODX_CORE_PATH . 'components/mckedextraplugins/elements/vendors/';
+        $files = scandir($path);
+        foreach ($files as $file) {
+            if (strpos($file, 'vendor.') === 0) {
+                $vendor = @include $path . $file;
+
+                if (!is_null($vendors) AND !in_array($vendor['key'], $vendors)) {
+                    continue;
+                }
+
+                foreach ($vendor['settings'] as $row) {
+                    $modCKEditor->addConfigSetting($row);
+                }
+            }
         }
-        $tmp->set('value', json_encode(array_keys($plugins), 1));
-        $tmp->save();
 
         break;
     case xPDOTransport::ACTION_UNINSTALL:
-        $modx->removeCollection('modSystemSetting', array('area' => $area));
+
+        $modx->removeCollection('modSystemSetting', array('area' => 'mckedep_ckeditor_config'));
 
         break;
 }

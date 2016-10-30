@@ -1,5 +1,10 @@
 Changelog for mckedExtraPlugins
 
+1.0.1-beta (30.10.2016)
+==============
+- Add "setup.options.php"
+- Improved "resolvers"
+
 1.0.0-beta
 ==============
 - Initial
