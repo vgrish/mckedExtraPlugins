@@ -19,8 +19,9 @@ switch ($options[xPDOTransport::PACKAGE_ACTION]) {
         if (!empty($vendors)) {
             $output .= '<ul id="formCheckboxes" style="height:200px;overflow:auto;">';
             foreach ($vendors as $v) {
+                $name = $v['name'] . ' - ' . $v['description'];
                 $checked = $v['checked'] ? 'checked' : '';
-                $output .= "<li><label><input type='checkbox' name='vendors[]' value='{$v['key']}' {$checked}> {$v['name']}</label></li>";
+                $output .= "<li><label><input type='checkbox' name='vendors[]' value='{$v['key']}' {$checked}> {$name}</label></li>";
             }
             $output .= '</ul>';
         }

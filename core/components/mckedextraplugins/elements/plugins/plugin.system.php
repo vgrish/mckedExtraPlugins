@@ -12,11 +12,13 @@ switch ($modx->event->name) {
             return;
         }
 
-        $managerCss = $modx->getOption('mckedep_ckeditor_manager_css', null);
-        $managerJs = $modx->getOption('mckedep_ckeditor_manager_js', null);
+        if ($managerCss = $modx->getOption('mckedep_manager_css', null)) {
+            $controller->addCss($managerCss);
+        }
 
-        $controller->addCss($managerCss);
-        $modx->regClientStartupScript($managerJs);
+        if ($managerJs = $modx->getOption('mckedep_manager_js', null)) {
+            $modx->regClientStartupScript($managerJs);
+        }
 
         break;
 

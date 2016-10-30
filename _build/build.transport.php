@@ -25,8 +25,8 @@ $sources = array(
     'source_core'   => $root . 'core/components/' . PKG_NAME_LOWER,
 
     'modckeditor_source_core' => array(
-        'components/modckeditor/lexicon/en/mcke.setting.inc.php',
-        'components/modckeditor/lexicon/ru/mcke.setting.inc.php'
+        'components/modckeditor/lexicon/en/mcke.mckedep.inc.php',
+        'components/modckeditor/lexicon/ru/mcke.mckedep.inc.php'
     )
 );
 

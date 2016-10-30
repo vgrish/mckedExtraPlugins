@@ -59,7 +59,7 @@ function extractVendor($vendor)
 
     if (file_exists($path . '.' . $name)) {
         $modx->log(modX::LOG_LEVEL_INFO, "Trying to delete old <b>{$name}</b> files. Please wait...");
-        $cacheManager->deleteTree($path,
+        $cacheManager->deleteTree($path . $name . '/',
             array_merge(array('deleteTop' => false, 'skipDirs' => false, 'extensions' => array())));
     }
 

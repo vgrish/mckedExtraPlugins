@@ -3,12 +3,12 @@
 $settings = array();
 
 $tmp = array(
-    'config_extraPlugins'       => array(
+    'cfg_extraPlugins'       => array(
         'value' => '',
         'xtype' => 'textarea',
         'type'  => 'string'
     ),
-    'config_addExternalPlugins' => array(
+    'cfg_addExternalPlugins' => array(
         'value' => '',
         'xtype' => 'textarea',
         'type'  => 'array'
@@ -30,8 +30,8 @@ foreach ($tmp as $k => $v) {
     $setting = $modx->newObject('modSystemSetting');
     $setting->fromArray(array_merge(
         array(
-            'key'       => 'mckedep_ckeditor_' . $k,
-            'area'      => 'mckedep_ckeditor_config',
+            'key'       => 'mckedep_' . $k,
+            'area'      => 'mckedep_cfg',
             'namespace' => 'modckeditor',
         ), $v
     ), '', true, true);

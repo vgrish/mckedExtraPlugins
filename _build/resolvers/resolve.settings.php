@@ -18,8 +18,8 @@ switch ($options[xPDOTransport::PACKAGE_ACTION]) {
         }
 
         $modx->removeCollection('modSystemSetting', array(
-            'key:LIKE' => "mckedep_ckeditor_config_%",
-            'area' => 'mckedep_ckeditor_config'
+            'key:LIKE' => "mckedep_cfg_%",
+            'area'     => 'mckedep_cfg'
         ));
 
         $vendors = isset($options['vendors']) ? $options['vendors'] : null;
@@ -43,7 +43,7 @@ switch ($options[xPDOTransport::PACKAGE_ACTION]) {
         break;
     case xPDOTransport::ACTION_UNINSTALL:
 
-        $modx->removeCollection('modSystemSetting', array('area' => 'mckedep_ckeditor_config'));
+        $modx->removeCollection('modSystemSetting', array('area' => 'mckedep_cfg'));
 
         break;
 }

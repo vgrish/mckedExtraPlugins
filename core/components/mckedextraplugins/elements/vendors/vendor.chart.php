@@ -5,7 +5,7 @@ $vendor = array(
     'name'        => 'Chart',
     'key'         => 'chart',
     'purpose'     => 'plugin',
-    'description' => '',
+    'description' => '<a href="http://ckeditor.com/addon/chart" target="_blank">Chart</a>',
     'checked'     => true,
     'extract'     => array(
         'chart',
@@ -16,7 +16,7 @@ $vendor = array(
     'settings'    => array(
         array(
             'key'   => 'extraPlugins',
-            'area'  => 'mckedep_ckeditor_config',
+            'area'  => 'mckedep_cfg',
             'type'  => 'string',
             'value' => array(
                 'chart'
@@ -24,7 +24,7 @@ $vendor = array(
         ),
         array(
             'key'   => 'addExternalPlugins',
-            'area'  => 'mckedep_ckeditor_config',
+            'area'  => 'mckedep_cfg',
             'type'  => 'array',
             'value' => array(
                 'chart' => '/components/modckeditor/vendor/plugins/chart/plugin.js'

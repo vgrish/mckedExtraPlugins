@@ -1,5 +1,11 @@
 Changelog for mckedExtraPlugins
 
+1.0.2-beta (30.10.2016)
+==============
+- Change prefix "setting"
+- Add "setup.options.php"
+- Add "Leaflet Maps" plugin
+
 1.0.1-beta (30.10.2016)
 ==============
 - Add "setup.options.php"

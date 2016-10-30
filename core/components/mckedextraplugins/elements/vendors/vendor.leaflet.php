@@ -2,15 +2,15 @@
 
 
 $vendor = array(
-    'name'        => 'Word Count',
-    'key'         => 'wordcount',
+    'name'        => 'Leaflet Maps',
+    'key'         => 'leaflet',
     'purpose'     => 'plugin',
-    'description' => '<a href="http://ckeditor.com/addon/wordcount" target="_blank">Word Count</a>',
+    'description' => '<a href="http://ckeditor.com/addon/leaflet" target="_blank">Leaflet Maps</a>',
     'checked'     => true,
     'extract'     => array(
-        'wordcount',
-        'wordcount',
-        'https://github.com/w8tcha/CKEditor-WordCount-Plugin/archive/master.zip',
+        'leaflet',
+        'leaflet',
+        'https://github.com/ranelpadon/ckeditor-leaflet/archive/master.zip',
         MODX_ASSETS_PATH . 'components/modckeditor/vendor/plugins/'
     ),
     'settings'    => array(
@@ -19,7 +19,7 @@ $vendor = array(
             'area'  => 'mckedep_cfg',
             'type'  => 'string',
             'value' => array(
-                'wordcount'
+                'leaflet'
             )
         ),
         array(
@@ -27,8 +27,14 @@ $vendor = array(
             'area'  => 'mckedep_cfg',
             'type'  => 'array',
             'value' => array(
-                'wordcount' => '/components/modckeditor/vendor/plugins/wordcount/wordcount/plugin.js'
+                'leaflet' => '/components/modckeditor/vendor/plugins/leaflet/plugin.js'
             )
+        ),
+        array(
+            'key'   => 'leaflet_maps_google_api_key',
+            'area'  => 'mckedep_cfg',
+            'type'  => 'string',
+            'value' => ''
         ),
     )
 );
