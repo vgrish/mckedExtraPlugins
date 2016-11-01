@@ -1,5 +1,10 @@
 Changelog for mckedExtraPlugins
 
+1.0.4-beta (02.11.2016)
+==============
+- Change "vendors"
+- Add "Typograf" plugin
+
 1.0.3-beta (01.11.2016)
 ==============
 - Change "vendors path"

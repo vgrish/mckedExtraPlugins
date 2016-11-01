@@ -22,3 +22,10 @@ $_lang['setting_mckedep_cfg_leaflet_maps_google_api_key'] = 'Google api key ';
 $_lang['setting_mckedep_cfg_leaflet_maps_google_api_key_desc'] = 'Ключ api. <a href="https://developers.google.com/maps/documentation/javascript/get-api-key" target="_blank">Получить</a>' .
     ' (libraries=places)';
 
+$_lang['setting_mckedep_cfg_typograf_addSafeTag'] = 'Настройка "addSafeTag" типографа';
+$_lang['setting_mckedep_cfg_typograf_addSafeTag_desc'] = 'Настройка "addSafeTag" типографа';
+
+$_lang['setting_mckedep_cfg_typograf_pathTypograf'] = 'Путь к файлу с javascript типографа';
+$_lang['setting_mckedep_cfg_typograf_pathTypograf_desc'] = 'Путь к файлу с javascript типографа';
+
+

@@ -6,12 +6,14 @@ $vendor = array(
     'key'         => 'leaflet',
     'purpose'     => 'plugin',
     'description' => '<a href="http://ckeditor.com/addon/leaflet" target="_blank">Leaflet Maps</a>',
-    'checked'     => true,
+    'checked'     => false,
     'extract'     => array(
-        'leaflet',
-        'leaflet',
-        'https://github.com/ranelpadon/ckeditor-leaflet/archive/master.zip',
-        MODX_ASSETS_PATH . 'components/modckeditor/vendor/plugins/'
+        array(
+            'leaflet',
+            'leaflet',
+            'https://github.com/ranelpadon/ckeditor-leaflet/archive/master.zip',
+            MODX_ASSETS_PATH . 'components/modckeditor/vendor/plugins/'
+        )
     ),
     'settings'    => array(
         array(

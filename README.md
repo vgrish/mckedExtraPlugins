@@ -8,9 +8,11 @@
 
 * [Leaflet Maps][4] - Leaflet Maps
 
+* [Typograf][5] - Typograf
 
 
 [1]: https://github.com/vgrish/modCKEditor
 [2]: https://github.com/w8tcha/CKEditor-WordCount-Plugin
 [3]: https://github.com/wwalc/chart
 [4]: https://github.com/ranelpadon/ckeditor-leaflet
+[4]: https://github.com/vgrish/ckeditor-plugin-typograf

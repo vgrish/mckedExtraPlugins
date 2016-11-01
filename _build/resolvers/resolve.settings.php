@@ -32,6 +32,8 @@ switch ($options[xPDOTransport::PACKAGE_ACTION]) {
 
                 if (!is_null($vendors) AND !in_array($vendor['key'], $vendors)) {
                     continue;
+                } elseif (is_null($vendors) AND !$vendor['checked']) {
+                    continue;
                 }
 
                 foreach ($vendor['settings'] as $row) {

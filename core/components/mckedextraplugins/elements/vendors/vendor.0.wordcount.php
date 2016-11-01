@@ -8,10 +8,12 @@ $vendor = array(
     'description' => '<a href="http://ckeditor.com/addon/wordcount" target="_blank">Word Count</a>',
     'checked'     => true,
     'extract'     => array(
-        'wordcount',
-        'wordcount',
-        'https://github.com/w8tcha/CKEditor-WordCount-Plugin/archive/master.zip',
-        MODX_ASSETS_PATH . 'components/modckeditor/vendor/plugins/'
+        array(
+            'wordcount',
+            'wordcount',
+            'https://github.com/w8tcha/CKEditor-WordCount-Plugin/archive/master.zip',
+            MODX_ASSETS_PATH . 'components/modckeditor/vendor/plugins/'
+        )
     ),
     'settings'    => array(
         array(
