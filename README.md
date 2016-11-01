@@ -15,4 +15,4 @@
 [2]: https://github.com/w8tcha/CKEditor-WordCount-Plugin
 [3]: https://github.com/wwalc/chart
 [4]: https://github.com/ranelpadon/ckeditor-leaflet
-[4]: https://github.com/vgrish/ckeditor-plugin-typograf
+[5]: https://github.com/vgrish/ckeditor-plugin-typograf
