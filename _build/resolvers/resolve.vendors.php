@@ -15,8 +15,6 @@ switch ($options[xPDOTransport::PACKAGE_ACTION]) {
         $path = MODX_CORE_PATH . 'components/mckedextraplugins/elements/vendors/';
         $files = scandir($path);
 
-        print_r($files);
-
         foreach ($files as $file) {
             if (strpos($file, 'vendor.') === 0) {
                 $vendor = @include $path . $file;
