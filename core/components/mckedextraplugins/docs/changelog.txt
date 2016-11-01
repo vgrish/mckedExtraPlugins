@@ -1,5 +1,9 @@
 Changelog for mckedExtraPlugins
 
+1.0.3-beta (01.11.2016)
+==============
+- Change "vendors path"
+
 1.0.2-beta (30.10.2016)
 ==============
 - Change prefix "setting"

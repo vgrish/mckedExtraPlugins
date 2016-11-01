@@ -27,7 +27,7 @@ $vendor = array(
             'area'  => 'mckedep_cfg',
             'type'  => 'array',
             'value' => array(
-                'leaflet' => '/components/modckeditor/vendor/plugins/leaflet/plugin.js'
+                'leaflet' => 'vendor/plugins/leaflet/plugin.js'
             )
         ),
         array(

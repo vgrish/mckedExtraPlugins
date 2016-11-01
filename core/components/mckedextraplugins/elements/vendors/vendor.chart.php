@@ -27,7 +27,7 @@ $vendor = array(
             'area'  => 'mckedep_cfg',
             'type'  => 'array',
             'value' => array(
-                'chart' => '/components/modckeditor/vendor/plugins/chart/plugin.js'
+                'chart' => 'vendor/plugins/chart/plugin.js'
             )
         ),
     )

@@ -27,7 +27,7 @@ $vendor = array(
             'area'  => 'mckedep_cfg',
             'type'  => 'array',
             'value' => array(
-                'wordcount' => '/components/modckeditor/vendor/plugins/wordcount/wordcount/plugin.js'
+                'wordcount' => 'vendor/plugins/wordcount/wordcount/plugin.js'
             )
         ),
     )
