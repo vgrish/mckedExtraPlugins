@@ -36,16 +36,27 @@ $vendor = array(
             'area'  => 'mckedep_cfg',
             'type'  => 'array',
             'value' => array(
-                'chart' => 'vendor/plugins/typograf/plugin.js'
+                'typograf' => 'vendor/plugins/typograf/plugin.js'
             )
         ),
         array(
             'key'   => 'typograf_addSafeTag',
             'area'  => 'mckedep_cfg',
-            'type'  => 'array',
+            'type'  => 'string',
             'value' => array(
-                '{,}',
-                '[,]',
+                array(
+                    array(
+                        '{'
+                    ),
+                    array(
+                        '}'
+                    ),
+                ),
+                array(
+                    array(
+                        '/\[.*?\]/g'
+                    ),
+                ),
             )
         ),
         array(
