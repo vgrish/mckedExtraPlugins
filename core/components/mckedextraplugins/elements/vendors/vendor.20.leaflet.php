@@ -12,7 +12,7 @@ $vendor = array(
             'leaflet',
             'leaflet',
             'https://github.com/ranelpadon/ckeditor-leaflet/archive/master.zip',
-            MODX_ASSETS_PATH . 'components/modckeditor/vendor/plugins/'
+            MODX_ASSETS_PATH . 'components/modckeditor/external/plugins/'
         )
     ),
     'settings'    => array(
@@ -25,18 +25,18 @@ $vendor = array(
             )
         ),
         array(
-            'key'   => 'addExternalPlugins',
-            'area'  => 'mckedep_cfg',
-            'type'  => 'array',
-            'value' => array(
-                'leaflet' => 'vendor/plugins/leaflet/plugin.js'
-            )
-        ),
-        array(
             'key'   => 'leaflet_maps_google_api_key',
             'area'  => 'mckedep_cfg',
             'type'  => 'string',
             'value' => ''
+        ),
+        array(
+            'key'   => 'addExternalPlugins',
+            'area'  => 'mckedep_cfg',
+            'type'  => 'array',
+            'value' => array(
+                'leaflet' => 'external/plugins/leaflet/plugin.js'
+            )
         ),
     )
 );

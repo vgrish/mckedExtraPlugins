@@ -12,7 +12,7 @@ $vendor = array(
             'chart',
             'chart',
             'https://github.com/wwalc/chart/archive/master.zip',
-            MODX_ASSETS_PATH . 'components/modckeditor/vendor/plugins/'
+            MODX_ASSETS_PATH . 'components/modckeditor/external/plugins/'
         )
     ),
     'settings'    => array(
@@ -29,7 +29,7 @@ $vendor = array(
             'area'  => 'mckedep_cfg',
             'type'  => 'array',
             'value' => array(
-                'chart' => 'vendor/plugins/chart/plugin.js'
+                'chart' => 'external/plugins/chart/plugin.js'
             )
         ),
     )

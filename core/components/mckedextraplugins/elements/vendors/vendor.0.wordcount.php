@@ -12,7 +12,7 @@ $vendor = array(
             'wordcount',
             'wordcount',
             'https://github.com/w8tcha/CKEditor-WordCount-Plugin/archive/master.zip',
-            MODX_ASSETS_PATH . 'components/modckeditor/vendor/plugins/'
+            MODX_ASSETS_PATH . 'components/modckeditor/external/plugins/'
         )
     ),
     'settings'    => array(
@@ -29,7 +29,7 @@ $vendor = array(
             'area'  => 'mckedep_cfg',
             'type'  => 'array',
             'value' => array(
-                'wordcount' => 'vendor/plugins/wordcount/wordcount/plugin.js'
+                'wordcount' => 'external/plugins/wordcount/wordcount/plugin.js'
             )
         ),
     )

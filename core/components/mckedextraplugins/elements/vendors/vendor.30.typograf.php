@@ -12,13 +12,13 @@ $vendor = array(
             'typograf',
             'typograf',
             'https://github.com/vgrish/ckeditor-plugin-typograf/archive/master.zip',
-            MODX_ASSETS_PATH . 'components/modckeditor/vendor/plugins/'
+            MODX_ASSETS_PATH . 'components/modckeditor/external/plugins/'
         ),
         array(
             'typograf.vendor',
             'typograf',
             'https://github.com/typograf/typograf/archive/dev.zip',
-            MODX_ASSETS_PATH . 'components/modckeditor/vendor/plugins/typograf/vendors/'
+            MODX_ASSETS_PATH . 'components/modckeditor/external/plugins/typograf/vendors/'
 
         ),
     ),
@@ -36,7 +36,7 @@ $vendor = array(
             'area'  => 'mckedep_cfg',
             'type'  => 'array',
             'value' => array(
-                'typograf' => 'vendor/plugins/typograf/plugin.js'
+                'typograf' => 'external/plugins/typograf/plugin.js'
             )
         ),
         array(
