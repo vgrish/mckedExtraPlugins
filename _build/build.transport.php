@@ -174,10 +174,11 @@ $category = $modx->newObject('modCategory');
 $category->set('category', PKG_NAME);
 /* create category vehicle */
 $attr = array(
-    xPDOTransport::UNIQUE_KEY      => 'category',
-    xPDOTransport::PRESERVE_KEYS   => false,
-    xPDOTransport::UPDATE_OBJECT   => true,
-    xPDOTransport::RELATED_OBJECTS => true,
+    xPDOTransport::UNIQUE_KEY                    => 'category',
+    xPDOTransport::PRESERVE_KEYS                 => false,
+    xPDOTransport::UPDATE_OBJECT                 => true,
+    xPDOTransport::RELATED_OBJECTS               => true,
+    xPDOTransport::ABORT_INSTALL_ON_VEHICLE_FAIL => true,
 );
 
 /* add snippets */
